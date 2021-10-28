@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">DuAn</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="fullname">FullName</string>
+    <string name="email">Email</string>
+    <string name="app_nameSQL">postSQL</string>
+    <string name="Post">Post</string>
+    <string name="food">Food name</string>
+    <string name="address">Address</string>
+    <string name="descrise">Description</string>
+    <string name="shop">Shop name</string>
+    <string name="help">"Can not post ? "</string>
+    <string name="login_here">Already have an acount? <u>login</u></string>
+</resources>
