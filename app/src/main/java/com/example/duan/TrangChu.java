@@ -1,9 +1,8 @@
 package com.example.duan;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 public class TrangChu extends AppCompatActivity {
 
     @Override

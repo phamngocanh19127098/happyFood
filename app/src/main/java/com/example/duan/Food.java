@@ -16,7 +16,7 @@ public class Food {
         this.like = like;
         this.stt = stt;
     }
-
+    
     public Food() {
 
     }
