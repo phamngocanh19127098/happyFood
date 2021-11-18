@@ -56,14 +56,14 @@ public class Post extends AppCompatActivity {
                             field[0] = "food";
                             field[1] = "address";
                             field[2] = "description";
-                            field[3] = "username";
+                            field[3] = "owner";
                             //Creating array for data
                             String[] data = new String[4];
                             data[0] = food;
                             data[1] = address;
                             data[2]= description;
                             data[3] = username;
-                            PutData putData = new PutData("http://192.168.1.6/createapost/post.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.1.2:81/createapost/post.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     progressBar.setVisibility(View.GONE);

@@ -19,6 +19,7 @@
             android:allowEmbedded="true"
             android:label="@string/Post"
             android:theme="@style/Theme.Design.NoActionBar">
+
         </activity>
         <activity
             android:name=".TrangChu"

@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... params) {
             String result="";
-            String host= "http://10.0.2.2/createapost/getdata.php";
+            String host= "http://10.0.2.2:81/createapost/getdata.php";
             try{
                 HttpClient client = new DefaultHttpClient();
                 HttpGet request = new HttpGet();
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                         String food = car.getString("food");
                         String address = car.getString("address");
                         String description = car.getString("description");
-                        String username= car.getString("username");
+                        String username= car.getString("owner");
                         String line= Integer.toString(id) + " "+ food+ " "+address +" "+description+" "+ username;
                         adapter.add(line);
 
