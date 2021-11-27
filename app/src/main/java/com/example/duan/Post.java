@@ -36,14 +36,14 @@ public class Post extends AppCompatActivity {
         buttonPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String food,address,description,username;
+                String food,address,description,owner;
                 food= String.valueOf(textInputEditTextFood.getText().toString());
                 address= String.valueOf(textInputEditTextAddress.getText().toString());
                 description= String.valueOf(textInputEditTextDescription.getText().toString());
 
-                username= String.valueOf(textInputEditTextUsername.getText().toString());
+                owner= String.valueOf(textInputEditTextUsername.getText().toString());
 
-                if(!food.equals("")&&!address.equals("")&&!description.equals("")&&!username.equals("")){
+                if(!food.equals("")&&!address.equals("")&&!description.equals("")&&!owner.equals("")){
                     //Start ProgressBar first (Set visibility VISIBLE)
                     progressBar.setVisibility(View.VISIBLE);
                     Handler handler = new Handler(Looper.getMainLooper());
@@ -62,10 +62,14 @@ public class Post extends AppCompatActivity {
                             data[0] = food;
                             data[1] = address;
                             data[2]= description;
-                            data[3] = username;
-                            PutData putData = new PutData("http://192.168.1.2:81/createapost/post.php", "POST", field, data);
+                            data[3] = owner;
+
+                            PutData putData = new PutData("http://192.168.1.4/createapost/post.php", "POST", field, data);
                             if (putData.startPut()) {
+
+
                                 if (putData.onComplete()) {
+
                                     progressBar.setVisibility(View.GONE);
                                     String result = putData.getResult();
                                     //End ProgressBar (Set visibility to GONE)
@@ -76,10 +80,12 @@ public class Post extends AppCompatActivity {
                                         finish();
                                     }
                                     else{
+                                        System.out.println(result);
                                         Toast.makeText(getApplicationContext(), result,Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             }
+
                             //End Write and Read data with URL
                         }
                     });
