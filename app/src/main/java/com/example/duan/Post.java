@@ -64,7 +64,7 @@ public class Post extends AppCompatActivity {
                             data[2]= description;
                             data[3] = owner;
 
-                            PutData putData = new PutData("http://192.168.1.4/createapost/post.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.1.5:81/createapost/post.php", "POST", field, data);
                             if (putData.startPut()) {
 
 

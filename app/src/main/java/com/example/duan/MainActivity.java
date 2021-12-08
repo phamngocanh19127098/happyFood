@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         listView = (ListView) findViewById(R.id.listView);
-        getJSON("http://192.168.1.4/createapost/data.php");
+        getJSON("http://192.168.1.5:81/createapost/data.php");
 
     }
 
